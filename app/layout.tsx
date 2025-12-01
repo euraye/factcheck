@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     "Enhancing Digital Literacy and Critical Thinking Through a Fact-Checking Simulation Game",
 };
 
+const DOWNLOAD_LINK = "";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,9 +43,15 @@ export default function RootLayout({
                 <Link href="#features">Features</Link>
                 <Link href="#survey">Survey</Link>
               </nav>
-              <Link href="" className="hidden lg:block ml-auto border border-white px-4 py-2 rounded text-white text-2xl hover:bg-white hover:text-black transition">
-                DOWNLOAD GAME
-              </Link>
+              {DOWNLOAD_LINK ? (
+                <Link href={DOWNLOAD_LINK} className="hidden lg:block ml-auto border border-white px-4 py-2 rounded text-white text-2xl hover:bg-white hover:text-black transition">
+                  DOWNLOAD GAME
+                </Link>
+              ) : (
+                <button disabled className="hidden lg:block ml-auto border border-gray-400 px-4 py-2 rounded text-gray-400 text-2xl cursor-not-allowed">
+                  NOT YET AVAILABLE
+                </button>
+              )}
               <SidebarTrigger className="-mr-1 ml-auto rotate-180 lg:hidden col-span-2" />
             </header>
             <div className="mt-20">{children}</div>
