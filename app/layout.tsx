@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Enhancing Digital Literacy and Critical Thinking Through a Fact-Checking Simulation Game",
 };
 
-const DOWNLOAD_LINK = "https://factcheck-eurdev.vercel.app/";
+const DOWNLOAD_LINK = "https://moon2moon.itch.io/fact-check";
 
 export default function RootLayout({
   children,
