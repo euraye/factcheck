@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Enhancing Digital Literacy and Critical Thinking Through a Fact-Checking Simulation Game",
 };
 
-const DOWNLOAD_LINK = "";
+const DOWNLOAD_LINK = "https://factcheck-eurdev.vercel.app/";
 
 export default function RootLayout({
   children,
@@ -57,7 +57,7 @@ export default function RootLayout({
             <div className="mt-20">{children}</div>
             <Footer />
           </SidebarInset>
-          <AppSidebar side="right" className="z-200"/>
+          <AppSidebar side="right" className="z-200" />
         </SidebarProvider>
       </body>
     </html>
