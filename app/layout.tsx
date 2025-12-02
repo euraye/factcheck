@@ -44,7 +44,7 @@ export default function RootLayout({
                 <Link href="#survey">Survey</Link>
               </nav>
               {DOWNLOAD_LINK ? (
-                <Link href={DOWNLOAD_LINK} className="hidden lg:block ml-auto border border-white px-4 py-2 rounded text-white text-2xl hover:bg-white hover:text-black transition">
+                <Link href={DOWNLOAD_LINK} target="_blank" className="hidden lg:block ml-auto border border-white px-4 py-2 rounded text-white text-2xl hover:bg-white hover:text-black transition">
                   DOWNLOAD GAME
                 </Link>
               ) : (
