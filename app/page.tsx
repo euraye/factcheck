@@ -30,21 +30,18 @@ const FEATURES = [
 ];
 
 const SCREENSHOTS = [
-  "/images/Image1.jpg",
-  "/images/Image2.jpg",
-  "/images/Image3.jpg",
-  "/images/Image4.jpg",
-  "/images/Image1.jpg",
-  "/images/Image2.jpg",
-  "/images/Image3.jpg",
-  "/images/Image4.jpg",
+  "/images/screenshot_1.png",
+  "/images/screenshot_2.png",
+  "/images/screenshot_3.png",
 ];
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-zinc-50 font-sans select-none">
       {/* ----- LANDING SECTION ----- */}
       <section className="">
-        <img src="/images/Landing.png" alt="" className="w-full" />
+        <picture>
+          <img src="/images/Landing.png" alt="" className="w-full" />
+        </picture>
         <LogoLoop
           logos={[
             { node: <h1 className="text-[#D9D9D9]">Republica Post!</h1> },
@@ -74,12 +71,12 @@ export default function Home() {
             overwhelmed by misinformation, fake news, and propaganda.{" "}
             <span className="bg-[#383838]/50 px-2">Fact Check</span> is a
             simulation game where you analyze news articles, social media posts,
-            and leaked documents to determine what's true, what's false, and
-            what's unverified. Test your integrity, sharpen your critical
+            and leaked documents to determine what&apos;s true, what&apos;s false, and
+            what&apos;s unverified. Test your integrity, sharpen your critical
             thinking, and become a champion of truth in the digital age.
           </p>
         </div>
-        <img src="/images/About.png" alt="" className="w-full" />
+        <picture> <img src="/images/About.png" alt="" className="w-full" /></picture>
       </section>
 
       {/* ----- FEATURES SECTION ----- */}
@@ -89,7 +86,9 @@ export default function Home() {
             <FeaturesCard key={index} data={feature} />
           ))}
         </div>
-        <img src="/images/Features.png" alt="" className="w-full" />
+        <picture>
+          <img src="/images/Features.png" alt="" className="w-full" />
+        </picture>
       </section>
 
       {/* ----- SCREENSHOTS ----- */}
@@ -106,12 +105,15 @@ export default function Home() {
           {/* ----- PHOTO 1 -----  */}
           {SCREENSHOTS.map((src, index) => (
             <div key={index} className="relative shrink-0 w-80 md:w-110 xl:w-110 2xl:w-145 snap-center">
-              <img src="/images/BoxTL.png" alt="" className="z-2" />
-              <img
-                src={src}
-                alt=""
-                className="absolute bottom-[0.6rem] right-0 w-[98.1%] z-1 object-cover aspect-[4.09/3]"
-              />
+              <picture>
+
+                <img src="/images/BoxTL.png" alt="" className="z-2" />
+                <img
+                  src={src}
+                  alt=""
+                  className="absolute bottom-[0.6rem] right-0 w-[98.1%] z-1 object-cover aspect-[4.09/3]"
+                />
+              </picture>
             </div>
           ))}
 
@@ -125,7 +127,9 @@ export default function Home() {
           </div> */}
         </div>
         {/* ----- BACKGROUND ----- */}
-        <img src="/images/Screenshots.png" alt="" className="w-full h-150 lg:h-250" />
+        <picture>
+          <img src="/images/Screenshots.png" alt="" className="w-full h-150 lg:h-250" />
+        </picture>
       </section>
 
       {/* ----- SURVEY SECTION ----- */}
@@ -135,7 +139,7 @@ export default function Home() {
             Help Us Improve
           </h1>
           <p className="text-center w-xs md:w-xl lg:w-3xl xl:w-5xl md:text-2xl lg:text-4xl xl:text-5xl">
-            Your feedback is crucial! We're conducting a research study to
+            Your feedback is crucial! We&apos;re conducting a research study to
             measure the effectiveness of Fact Check in improving media literacy
             and critical thinking skills. Please take a few minutes to complete
             our survey and share your experience playing the game.
@@ -148,7 +152,9 @@ export default function Home() {
             TAKE THE SURVEY
           </Link>
         </div>
-        <img src="/images/Survey.png" alt="" className="w-full" />
+        <picture>
+          <img src="/images/Survey.png" alt="" className="w-full" />
+        </picture>
       </section>
     </div>
   );
